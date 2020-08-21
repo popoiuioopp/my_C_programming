@@ -41,16 +41,8 @@ int question3()
     printf("Please enter a number between 1 to 10: ");
     scanf("%d", &number);
 
-    printf("%*s%d\n", 4, "1000", number);
-    printf("%*s%d\n", 3, "100", number);
-    printf("%*s%d\n", 2, "10", number);
-    printf("%*s%d\n", 1, "1", number);
-    printf("%*s%d\n", 0, "", number);
+    printf("%-5d\n%-5d\n%-5d\n%-5d\n%-5d\n",number+10000, number+1000, number+100, number+10, number+0);
+    printf("%5d\n%5d\n%5d\n%5d\n%5d\n",number+0, number+10, number+100, number+1000, number+10000);
 
-    printf("%*s%d\n",4 , "", number);
-    printf("%*s%d\n",4 , "1", number);
-    printf("%*s%d\n",4 , "10", number);
-    printf("%*s%d\n",4 , "100", number);
-    printf("%*s%d\n",4 , "1000", number);
     return 0;
 }
