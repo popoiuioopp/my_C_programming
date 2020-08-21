@@ -4,16 +4,13 @@
 
 int main()
 {
-    /*
+
     int number;
     printf("Put in the number : ");
     scanf("%d", &number);
-    isPrime(number);
-    return 0;
     int count =0;
-
-
     int i = 1;
+
     while (i < 10000){
         compare(i);
         if(compare(i) == 0)
@@ -21,14 +18,8 @@ int main()
             count++;
         }
         i++;
-
-    printf("%d", count);*/
-    int i = 100000000;
-    while (i < 100001000)
-    {
-        isPrime(i);
-        i++;
     }
+    printf("%d", count);
 }
 
 int isPrime(int number)
@@ -48,7 +39,7 @@ int isPrime(int number)
             return 0;
         }
     }
-    printf("%d IS PRIME\n", number);
+    //printf("%d IS PRIME\n", number);
     return 1;
 }
 
