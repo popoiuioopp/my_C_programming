@@ -4,13 +4,8 @@
 
 int main()
 {
-
-    int number;
-    printf("Put in the number : ");
-    scanf("%d", &number);
     int count =0;
     int i = 1;
-
     while (i < 10000){
         compare(i);
         if(compare(i) == 0)
