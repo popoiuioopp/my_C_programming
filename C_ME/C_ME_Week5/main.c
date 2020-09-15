@@ -3,7 +3,12 @@
 
 int main()
 {
+    problem1();
+    printf("\n==================\n");
+    problem2();
+    printf("\n==================\n");
     problem3();
+    printf("\n==================\n");
     return 0;
 }
 
@@ -21,22 +26,22 @@ int problem1()
     switch(c)
   {
     case '+': res=a+b;
-    printf("\n The sum is %.3f",res);
+    printf("The sum is %.2f \n",res);
     break;
 
     case '-': res=a-b;
-    printf("\n The difference is %.3f",res);
+    printf("The difference is %.2f \n",res);
     break;
 
     case '*': res=a*b;
-    printf("\n The product is %.3f",res);
+    printf("The product is %.2f \n",res);
     break;
 
     case '/': res=a/b;
-    printf("\n The quotient is %.3f",res);
+    printf("The quotient is %.2f \n",res);
     break;
 
-    default: printf ("\n Invalid entry");
+    default: printf ("Invalid entry \n");
   }
     return 0;
 }
@@ -62,6 +67,13 @@ int problem3()
     {
         unit[i] = tolower(unit[i]);
     }
+
+    if (money < 0)
+    {
+        printf("Please enter the correct amount\n");
+        return 0;
+    }
+
     if (strcmp(unit, "thb") == 0)
     {
         printf("Enter number of choice you want from below\n");
@@ -69,7 +81,44 @@ int problem3()
         scanf("%d", &choice);
         if(choice == 1)
         {
-            printf("%f %s is equal to %.2f USD\n", money, unit, (money/32.5));
+            printf("%.2f %s is equal to %.2f USD\n", money, unit, (money/32.5));
+        }
+        else if(choice == 2)
+        {
+            printf("%.2f %s is equal to %.2f NOK\n", money, unit, (money/3.8));
         }
     }
+        else if (strcmp(unit, "usd") == 0)
+    {
+        printf("Enter number of choice you want from below\n");
+        printf("1 --> USD to THB\n2 --> USD to NOK\n");
+        scanf("%d", &choice);
+        if(choice == 1)
+        {
+            printf("%.2f %s is equal to %.2f THB\n", money, unit, (money*32.5));
+        }
+        else if(choice == 2)
+        {
+            printf("%.2f %s is equal to %.2f NOK\n", money, unit, (money*(32.5/3.8)));
+        }
+    }
+    else if (strcmp(unit, "nok") == 0)
+    {
+        printf("Enter number of choice you want from below\n");
+        printf("1 --> NOK to THB\n2 --> NOK to USD\n");
+        scanf("%d", &choice);
+        if(choice == 1)
+        {
+            printf("%.2f %s is equal to %.2f THB\n", money, unit, (money*3.8));
+        }
+        else if(choice == 2)
+        {
+            printf("%.2f %s is equal to %.2f USD\n", money, unit, (money*(3.8/32.5)));
+        }
+    }
+    else
+    {
+        printf("Please enter the correct amount\n");
+    }
+    return 0;
 }
