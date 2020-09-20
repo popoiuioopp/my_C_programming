@@ -3,11 +3,13 @@
 
 int main()
 {
-    problem1();
+    double max = 99999999999999;
+    printf("%d", max);
+    //problem1();
     printf("\n==================\n");
-    problem2();
+    //problem2();
     printf("\n==================\n");
-    problem3();
+    //problem3();
     printf("\n==================\n");
     return 0;
 }
@@ -87,6 +89,10 @@ int problem3()
         {
             printf("%.2f %s is equal to %.2f NOK\n", money, unit, (money/3.8));
         }
+        else
+        {
+            printf("Incorrect command\n");
+        }
     }
         else if (strcmp(unit, "usd") == 0)
     {
@@ -101,6 +107,10 @@ int problem3()
         {
             printf("%.2f %s is equal to %.2f NOK\n", money, unit, (money*(32.5/3.8)));
         }
+        else
+        {
+            printf("Incorrect command\n");
+        }
     }
     else if (strcmp(unit, "nok") == 0)
     {
@@ -114,6 +124,10 @@ int problem3()
         else if(choice == 2)
         {
             printf("%.2f %s is equal to %.2f USD\n", money, unit, (money*(3.8/32.5)));
+        }
+        else
+        {
+            printf("Incorrect command\n");
         }
     }
     else
